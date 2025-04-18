@@ -11,9 +11,12 @@ Each image has been standardized (128x128 resolution), normalized, and enhanced 
 ![image](https://github.com/user-attachments/assets/bd42c6e1-fe22-460e-b0a2-b2c4ce8ab2f4)
 
 This dataset is a curated and combined version of the following publicly available datasets on Kaggle:
-- [Food Freshness by AlineSellwia](https://www.kaggle.com/datasets/alinesellwia/food-freshness)
-- [Fresh and Stale Classification by swoyam2609](https://www.kaggle.com/datasets/swoyam2609/fresh-and-stale-classification)
-- [Fruits and Vegetables Dataset by muhriddinmuxiddinov](https://www.kaggle.com/datasets/muhriddinmuxiddinov/fruits-and-vegetables-dataset)
+
+[1] [Food Freshness by AlineSellwia](https://www.kaggle.com/datasets/alinesellwia/food-freshness)
+
+[2] [Fresh and Stale Classification by swoyam2609](https://www.kaggle.com/datasets/swoyam2609/fresh-and-stale-classification)
+
+[3] [Fruits and Vegetables Dataset by muhriddinmuxiddinov](https://www.kaggle.com/datasets/muhriddinmuxiddinov/fruits-and-vegetables-dataset)
 
 Images from these sources were carefully selected and manually reviewed. The dataset was then processed to ensure consistency in image size, format, and quality. Transformations include resizing to 128x128, normalization, grayscale conversion, noise reduction, edge detection, and categorization based on freshness levels. Additionally, class balance was maintained, and augmentation techniques (flipping, rotation, brightness adjustments) were applied to increase variability and robustness of the dataset.
 
@@ -26,6 +29,7 @@ This finalized dataset serves as a comprehensive resource for food freshness cla
 - **Labels**: Fresh / Rotten  
 - **File Types**: `.jpg`, `.jpeg`, `.png`  
 - **Applications**: Image Classification, Freshness Detection, Computer Vision in Agriculture  
+- **Dataset Link**: [4] [Finalized Datset](https://www.kaggle.com/datasets/ulnnproject/food-freshness-dataset)
 ---
 ## 📌 Usage
 
@@ -37,7 +41,6 @@ You can use this dataset for:
 ---
 ## Model Architecture
 ![Model Architecture](https://github.com/user-attachments/assets/cf890e9f-35bc-4640-9710-1ab0f5f13f35)
-
 
 ## 📁 Dataset Preparation
 The dataset contains fruit images labeled under the categories "Fresh" and "Rotten". The images were processed as follows:
@@ -140,10 +143,42 @@ Each model was evaluated on four metrics:
 
 ---
 
+## 🕵️‍♂️🔧👨🏻‍💻Testing on New Data Results
+
+You can refer to the images from the Testing Folder
+
+### Tested on K Means Clustering Models
+| Model         | Testing Files/RottenMango_1.jpg | Testing Files/RottenMango_2.jpg | Testing Files/RottenMango_3.jpg |
+|---------------|---------------------------------|---------------------------------|---------------------------------|
+| **AlexNet** | Spoiled | Spoiled | Spoiled |
+| **VGG16** | Spoiled | Spoiled | Spoiled |
+| **VGG19** | Spoiled | Spoiled | Slate |
+| **MobileNetV2** | Spoiled | Slate | Spoiled |
+| **ResNet50** | Slate | Slate | Slate |
+| **DenseNet121** | Spoiled | Spoiled | Spoiled |
+| **InceptionV3** | Spoiled | Slate | Slate |
+| **Xception** | Spoiled | Slate | Spoiled |
+
+---
+
+### Tested on Agglomerative Clustering Models
+| Model         | Testing Files/RottenMango_1.jpg | Testing Files/RottenMango_2.jpg | Testing Files/RottenMango_3.jpg |
+|---------------|---------------------------------|---------------------------------|---------------------------------|
+| **AlexNet** | Slate | Slate | Rotten |
+| **VGG16** | Rotten | Rotten | Rotten |
+| **VGG19** | Rotten | Slate | Slate |
+| **MobileNetV2** | Rotten | Slate | Slate |
+| **ResNet50** | Rotten | Rotten | Rotten |
+| **DenseNet121** | Rotten | Rotten | Rotten |
+| **InceptionV3** | Rotten | Rotten | Rotten |
+| **Xception** | Spoiled | Slate | Rotten |
+
+---
+
 ## 👨‍💻 Contributors
-1. Saragadam Kundana Chinni  
-2. Thalluru Lakshmi Prasanna  
-3. Kesa Veera Venkata Yaswanth  
+1. [Saragadam Kundana Chinni](https://www.linkedin.com/in/saragadam-kundana-chinni-b17321297/) 
+2. [Thalluru Lakshmi Prasanna](https://www.linkedin.com/in/thalluru-lakshmi-prasanna-322a76330/) 
+3. [Kesa Veera Venkata Yaswanth](https://www.linkedin.com/in/kesa-veera-venkata-yaswanth-6ba447281)
 
 ---
 
@@ -151,4 +186,3 @@ Each model was evaluated on four metrics:
 - Integration of real-time quality detection using camera feed
 - Extending to multi-fruit classification
 - Real-time deployment on mobile devices using TensorFlow Lite or ONNX
-
